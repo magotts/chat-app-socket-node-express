@@ -5,7 +5,7 @@ const socket = io();
 
 // message from server
 socket.on("message", message => {
-  console.log(message);
+  console.log("message is", message);
   outputMessage(message);
 
   // scroll down
