@@ -1,0 +1,26 @@
+{
+  "name": "chatroom_traversy",
+  "version": "1.0.0",
+  "description": "chat app using socket io, node and express",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magotts/chat-app-socket-node-express.git"
+  },
+  "author": "YHL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magotts/chat-app-socket-node-express/issues"
+  },
+  "homepage": "https://github.com/magotts/chat-app-socket-node-express#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
