@@ -16,7 +16,7 @@ const io = socketio(server);
 
 app.use(express.static(path.join(__dirname, "public")));
 
-const botName = "ChatBot";
+const botName = "Y-BOT";
 // run when client connects
 io.on("connection", (socket) => {
   socket.on("joinRoom", ({ username, room }) => {
@@ -25,7 +25,7 @@ io.on("connection", (socket) => {
 
     console.log("New WS Connection...");
 
-    socket.emit("message", formatMessage(botName, "Welcome to the chat!"));
+    socket.emit("message", formatMessage(botName, `Welcome to the room, ${user.username}!`));
 
     // broadcast when a user connects
     socket.broadcast
@@ -64,7 +64,7 @@ io.on("connection", (socket) => {
       room: user.room,
       users: getRoomUsers(user.room),
     });
-    
+
     }
   });
 });
